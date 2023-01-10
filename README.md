@@ -4,7 +4,6 @@ Using HTML/JS/CSS, I built an aesthetic, minimal pomodoro timer for personal use
 
 *btw the cool monke's name is "pomoe"
 
-Demo:
 <br>
 [![Watch the video](https://img.youtube.com/vi/3UYyDPv7BiY/0.jpg)](https://www.youtube.com/watch?v=3UYyDPv7BiY)
 
