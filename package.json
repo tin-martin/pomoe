@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "firebase": "^9.15.0",
+    "firebase-admin": "^11.4.1",
+    "firebaseui": "^6.0.2",
+    "hacktimer": "^1.1.3"
+  }
+}

@@ -1,0 +1,172 @@
+<html>
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon_io/site.webmanifest">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap" rel="stylesheet">
+    <style> @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@600&display=swap'); </style>
+    <link rel="stylesheet" href="style.css">
+    <title>pomoe</title>
+   
+</head>
+
+<body style="  -webkit-user-select: none; /* Safari */
+-ms-user-select: none; /* IE 10 and IE 11 */
+user-select: none; /* Standard syntax */">
+<!--<div class="g-signin2" data-onsuccess="onSignIn" data-width="30" data-height="30" data-longtitle="false" style="left:0px;"></div>-->  
+
+<div id="settings" class="settings"   style="display:none;">
+  
+
+        <form id="form">
+            <div class="fcol" style="  justify-content:left; margin-bottom: 60px;">
+                <button id="back" style=" margin-left:20px; margin-top:20px; background-color:#2B1334; outline:none;
+                border:none;width:30px; height:30px;  " >
+                <img style=" width:30px; height:30px; " src="back.svg">
+                </button>
+                </div>
+            <div class="fcol" style="justify-content:center">
+               
+             
+                <label for="fname">Pomo:</label>
+                <input class="finp" id="pomoi" type="number" value="30">
+                <label  for="fname">Short break:</label>
+                <input class="finp" id="shorti" type="number" value="5">
+                <label  for="fname">Long break:</label>
+                <input class="finp" id="longi" type="number" value="15">
+             </div>
+            <br>
+            <div class="scol" style="justify-content:center">
+            <label style="margin-left:10px;margin-right:10px;" for="fname">Long break interval:</label>
+            <input class="finp" id="longBreakIntervali" type="number" value="4">
+
+            <label style="margin-left:10px;margin-right:10px;"  for="fname">Bkg src:</label>
+            <input id="backgroundi" type="text">
+            </div>
+            <br>
+            <div class="fcol">
+            <input class="submit" type="submit" value="OK">
+        </div>
+            
+
+        </form> 
+</div>
+
+<div id="main">
+    <div id="a" class="a" style="opacity:0.75px;"></div>
+    <audio id="myAudio">
+        <source src="sound.mp3" type="audio/mpeg">
+    </audio>
+    <p class="time" id="time"></p> 
+    <div style="
+
+display: flex;
+flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width:100%;
+
+    ">
+      
+        <div class="bigBox" style="margin-bottom:50px;">
+            <div class="box" style="height:350px;">
+                <div class="statusBar" id="statusBar">
+                    <div id="inner-statusBar" style="background:white;height:5px;width:100%;border-radius: 50px 50px 0px 0px;"></div>
+                </div>
+                
+                <div class="bar" style="margin-bottom:100px;">
+                    <button id="pomo" onclick="pomoFunc()" class="bar-btn" style="border-radius: 0px 0px 0px 10px;"><p>pomo</p></button>
+                    <button id="short" onclick="shortFunc()" class="bar-btn"><p>short break</p></button>
+                    <button id="long" onclick="longFunc()" class="bar-btn" style="border-radius: 0px 0px 10px 0px;"><p>long break</p></button>
+                </div>
+                <div class="display">
+                    <p id="display" style="color:white; width:'500px'; letter-spacing:0.001px; -webkit-user-select: none; /* Safari */
+                    -ms-user-select: none; /* IE 10 and IE 11 */
+                    user-select: none; /* Standard syntax */"></p>
+                </div>
+                <div class="bottom">
+                    <div class="pp"></div>
+                    <button class="special" id="special" onclick="start()" style="background: #882434; width:220px; display:flex; justify-content:center; align-items:center; ">
+                        <img id="play-pause" src="play.svg" style="width:40px; height:40px;-webkit-user-select: none; /* Safari */
+                        -ms-user-select: none; /* IE 10 and IE 11 */
+                        user-select: none; /* Standard syntax */ ">
+                    </button>
+                    <div class="pp" style=" display:flex; justify-content:center; align-items:center;-webkit-user-select: none; /* Safari */
+                    -ms-user-select: none; /* IE 10 and IE 11 */
+                    user-select: none; /* Standard syntax */  ">
+                        <button id="next" onclick="next()" style="background: #2B1334; ">
+                            <img src="next.svg" style="width:40px; height:40px; ">
+                        </button>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="sideBar">
+              <!--  <div class="sqr" style="z-index:10;"></div>-->
+                <button class="dot" style="z-index:15;" onclick="settings()">
+                    <img src="settings.svg" style="width:35px; height:35px; ">
+                </button>
+                <button class="dot" style="z-index:15;" onclick="hide()">
+                    <img id="hide-show" src="invisible.svg" style="width:35px; height:35px; ">
+                </button>
+                
+                <div class="timeWorked">
+                    <div class="cont">
+                        <p class="w-txt" id="hrWorked">0</p>
+                        <p class="s-txt">hr</p>
+                        <p class="w-txt" id="minWorked">0</p>
+                        <p class="s-txt">min</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="bigBox" style=" opacity:80%; height:250px;-webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */"> 
+            <div class="box" style="margin-bottom:-50px; height:250px; -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */   display:flex;
+        justify-content:center;
+        align-items: center;"> 
+        
+                <textarea type="text" class="textarea" style="height:250px;resize:none; outline:0px;" placeholder="write ur notes here..."></textarea>
+            </div>
+            
+            <div class="sideBar" style="-webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */"></div>
+        </div>
+    
+    </div>
+    
+    
+    <img id="pomoe" src="static-pomoe.gif" style="position: fixed;
+    width: 200px;
+    height: 350px;
+    left: 50px;
+    top: 400px; -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */">
+  <!--
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <meta name="google-signin-client_id" content="642388886666-8ck6pm64r4eehsolo3r0q4tlpn5u8ven.apps.googleusercontent.com">
+  <a href="#" onclick="signOut();">Sign out</a>
+    <script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+        console.log('User signed out.');
+        });
+    }
+    -->
+</div>
+    </script>
+    
+    <script type="module" src="HackTimer.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.a{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    position:absolute;z-index:-5;
+    /* Specify the background image to be used */
+    background-image: url(
+'https://media.geeksforgeeks.org/wp-content/uploads/20210313130410/exbg.png');
+    background-size: cover;
+
+    /* Specify the background image */
+    opacity: 0.2;
+
+}
