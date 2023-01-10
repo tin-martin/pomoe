@@ -1,6 +1,6 @@
 # Pomoe (my pomodoro timer)
 
-Using HTML/JS/CSS, I built an aesthetic, minimal pomodoro timer for personal use (im a student) with customizable background, space to jot down notes, and cool times-up animation. (credit to nic)
+Using HTML/JS/CSS, I built an aesthetic, minimal pomodoro timer for personal use (im a student) with customizable background, space to jot down notes, and a cool times-up animation. (credit to nic)
 
 *btw the cool monke's name is "pomoe"
 
